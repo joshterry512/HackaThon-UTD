@@ -1,0 +1,12 @@
+{
+  "name": "WaveRider",
+  "displayName": "WaveRider",
+  "expo": {
+    "name": "WaveRider",
+    "slug": "WaveRider",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
