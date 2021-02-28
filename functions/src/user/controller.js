@@ -1,9 +1,7 @@
-//proxySpotifyToken method that will handle our authorization 
-//calls and inject the Client Secret of our oAuth provider where required.
 const spotifyConfig = {
     clientId: "*******",
     clientSecret: "**********",
-    redirectUrl: "com.authdemo://oauthredirect" // the redirect
+    redirectUrl: "com.authdemo://oauthredirect"
 };
 
 async function proxySpotifyToken(_req, res){
