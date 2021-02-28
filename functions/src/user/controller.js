@@ -1,7 +1,7 @@
 const spotifyConfig = {
-    clientId: "*******",
-    clientSecret: "**********",
-    redirectUrl: "com.authdemo://oauthredirect"
+    clientId: "84ab725554124a628b7fa754e753f304",
+    clientSecret: "94ca459597a04e0bb4b817b97951c7b7",
+    redirectUri: "http://waverider//callback/"
 };
 
 var SpotifyApi = new SpotifyWebApi(spotifyConfig);

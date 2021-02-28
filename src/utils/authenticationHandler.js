@@ -1,12 +1,11 @@
 import {authorize, refresh} from 'react-native-app-auth';
 
 class AuthenticationHandler {
-  spotifyAuthConfig: { clientId: string; clientSecret: string; redirectUrl: string; scopes: string[]; serviceConfiguration: { authorizationEndpoint: string; tokenEndpoint: string; }; };
   constructor() {
     this.spotifyAuthConfig = {
-      clientId: '84ab725554124a628b7fa754e753f304',
+      clientId: '84ab725554124a628b7fa754e753f304-your-clientid',
       clientSecret: '94ca459597a04e0bb4b817b97951c7b7',
-      redirectUrl: 'https://auth.expo.io/@findchelsea16/waverider',
+      redirectUrl: 'http://waverider//callback/',
       scopes: [
         'playlist-read-private',
         'playlist-modify-public',
@@ -32,7 +31,7 @@ class AuthenticationHandler {
     } 
   }
 
-  async refreshLogin(refreshToken: any) {
+  async refreshLogin(refreshToken) {
     const result = await refresh(this.spotifyAuthConfig, {
       refreshToken: refreshToken,
     });
