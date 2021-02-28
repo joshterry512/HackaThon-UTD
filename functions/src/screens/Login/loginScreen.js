@@ -21,8 +21,7 @@ class LoginScreen extends Component {
       refreshToken: authenticationObject.refreshToken,
     });
   };
-
-
+  
   render() {
     return (
       <View>
