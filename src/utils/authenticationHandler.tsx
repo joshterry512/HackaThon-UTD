@@ -6,7 +6,7 @@ class AuthenticationHandler {
     this.spotifyAuthConfig = {
       clientId: '84ab725554124a628b7fa754e753f304',
       clientSecret: '94ca459597a04e0bb4b817b97951c7b7',
-      redirectUrl: 'https://auth.expo.io/@findchelsea16/waverider',
+      redirectUrl: 'http://localhost:8888/callback',
       scopes: [
         'playlist-read-private',
         'playlist-modify-public',

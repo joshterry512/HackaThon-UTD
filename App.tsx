@@ -22,7 +22,7 @@ export default function App() {
       // For usage in managed apps using the proxy
       redirectUri: makeRedirectUri({
         // For usage in bare and standalone
-        native: 'waverider://callback/',
+        native: 'http://localhost:8888/callback',
       }),
     },
     discovery
