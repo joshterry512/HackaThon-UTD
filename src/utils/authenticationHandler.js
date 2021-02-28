@@ -17,7 +17,7 @@ class AuthenticationHandler {
       ],
       serviceConfiguration: {
         authorizationEndpoint: 'https://accounts.spotify.com/authorize',
-        tokenEndpoint: 'https://accounts.spotify.com/api/token',
+        tokenEndpoint: 'https://waverider-53d8c-default-rtdb.firebaseio.com/api/user/authentication',
       },
     };
   }

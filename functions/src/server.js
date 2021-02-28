@@ -10,6 +10,3 @@ app.use(bodyParser.json())
    .json({success: false, data: "endpoint not found."}));
 
 module.exports = app;
-
-//This will be our entry file for our express api. 
-//Every call to our /api/* url will be handled via this file.
