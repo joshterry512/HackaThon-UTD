@@ -1,19 +1,46 @@
-import React, { Component } from 'react';
-import {
-  View, Button
-} from 'react-native';
+import React, {Component} from 'react';
+import {View, Button} from 'react-native';
 
-import authHandler from "../../utils/authenticationHandler";
+import {connect} from 'react-redux';
+
+import authHandler from '../../utils/authenticationHandler';
+
+import {
+  setAccessToken,
+  setRefreshToken,
+  setSigingIn,
+} from '../../redux/features/authentication/authenticationSlice';
 
 class LoginScreen extends Component {
-    state = {  }
-    render() {
-        return (
-            <View>
-                <Button onPress={() => authHandler.onLogin()} title="Press to login"/>
-            </View>
-        );
-    }
+  state = {};
+
+  onPressLogin = async () => {
+    const authenticationObject = await authHandler.onLogin();
+    this.props.setAccessToken({accessToken: authenticationObject.accessToken});
+    this.props.setRefreshToken({
+      refreshToken: authenticationObject.refreshToken,
+    });
+  };
+
+
+  render() {
+    return (
+      <View>
+        <Button onPress={this.onPressLogin} title="Press to login" />
+      </View>
+    );
+  }
 }
 
-export default LoginScreen;
+const mapStateToProps = state => {
+  return {
+    authentication: state.authentication,
+  };
+};
+
+const mapDispatchToProps = {setAccessToken, setRefreshToken, setSigingIn};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(LoginScreen);
