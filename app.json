@@ -2,6 +2,11 @@
   "name": "WaveRider",
   "displayName": "WaveRider",
   "expo": {
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
     "name": "WaveRider",
     "slug": "WaveRider",
     "version": "1.0.0",
